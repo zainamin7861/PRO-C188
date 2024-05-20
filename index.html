@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>ROOM DECOR</title>
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+</head>
+
+<body>
+  <a-scene background="color:white">
+
+    <a-camera position="9 50 70"></a-camera>
+
+    <a-assets>
+
+      <a-asset-item id="room" src="./assets/tinker.obj"></a-asset-item>
+      <a-asset-item id="room_mtl" src="./assets/obj.mtl"></a-asset-item>
+
+    </a-assets>
+
+
+    <!--circular plane-->
+    <a-circle position="-0.4 -0.76 -25" rotation="-90 0 0" radius="110" shadow="receive: true" visible="true"
+      color="#2e6f10"></a-circle>
+
+    <a-entity obj-model="obj: #room; mtl: #room_mtl" position="5 0 0" rotation="-90 -40 0"
+      scale="0.5 0.5 0.5 "></a-entity>
+
+
+  </a-scene>
+</body>
+
+</html>
